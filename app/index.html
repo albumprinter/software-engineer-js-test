@@ -4,13 +4,31 @@
         <title>Albumprinter test application</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1"/>
-        <link rel="stylesheet" href="./app/css/styles.css" media="all"></link>
-        <script type="text/javascript" src="./app/js/main.js"></script>
+        <link rel="stylesheet" href="./app/css/styles.css" media="all" />
     </head>
     <body>
         <h1>Test application</h1>
         <p>
-            There should be a message in your browsers console.
+            Your application is ready. There should be a message in your browsers
+            console indicating the JavaScript application has loaded.
         </p>
+        <form action="#">
+            <fieldset>
+                <label for="fileSelector">Select an Image file</label>
+                <input type="file" id="fileSelector" />
+            </fieldset>
+        </form>
+        <div class="column left">
+            <div id="imageContainer">
+                <!-- will hold photos -->
+            </div>
+            <button id="generateButton">Generate!</button>
+        </div>
+        <div class="column right">
+            <div id="debugContainer">
+                <!-- will hold debug messages -->
+            </div>
+        </div>
+        <script type="text/javascript" src="./app/js/main.js"></script>
     </body>
 </html>

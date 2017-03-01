@@ -36,7 +36,10 @@ gulp.task('html', () => {
         //catch errors
         .pipe(gulp.dest(OUTPUT_PATH))
         .pipe(browserSync.reload({stream: true}))
-        .on('error', logError);
+        .on('error', function( e ) {
+            logError( e );
+            this.emit('end');
+        });
 });
 
 /* internal handlers */
@@ -66,7 +69,10 @@ gulp.task('styles', () => {
             ]
         }))
         //catch errors
-        .on('error', logError)
+        .on('error', function( e ) {
+            logError( e );
+            this.emit('end');
+        })
         //the final filename of our combined css file
         .pipe(concat('styles.css'))
         //get our sources via sourceMaps
@@ -81,7 +87,10 @@ gulp.task('scripts', ['browserify', 'js']);
 
 gulp.task('js', () => {
     return bundler.bundle()
-        .on('error', logError )
+        .on('error', function( e ) {
+            logError( e );
+            this.emit('end');
+        })
         .pipe(source('app/js/main.js'))
         .pipe(gulp.dest(OUTPUT_PATH))
                 //notify browserSync to refresh
