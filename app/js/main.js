@@ -62,7 +62,7 @@ fileSelector.onchange = function( e ) {
 };
 
 generateButton.onclick = function( e ) {
-    log( "GENERATED BUTTON CLICKED!! Show this do something else?" );
+    log( "GENERATE BUTTON CLICKED!! Should this do something else?" );
 };
 
 log( "Test application ready" );
