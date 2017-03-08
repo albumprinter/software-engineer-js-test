@@ -12,7 +12,7 @@ You will be working in an company where our customers will purchase a
 printed product. As such your expertise should not be restricted to
 developing applications, but also extend to understand the requirements
 of print and how to translate between the app and the print world and 
-ice versa.
+vice versa.
 
 ### Goal
 
@@ -43,7 +43,7 @@ application that you would have to maintain for years to come ;)
 It is by no means necessary to make this application look attractive or
 to spend a lot of time in providing the best interaction with the photo.
 If you need to add buttons to “_move photo left_”, "_move photo right_" or
-“_scale photo 50%_", "scale photo 200%_” that is enough. It is about the
+“_scale photo 50%_", "_scale photo 200%_” that is enough. It is about the
 _design of your code_, NOT the design of the application interface!
 
 It is more important to show how you write (in your eyes) a maintainable
