@@ -42,12 +42,14 @@ fileSelector.onchange = function( e ) {
                     // add image to container
                     imageContainer.appendChild( img );
 
-                    // grab some data from the image
-                    var imageData = {
-                        "width": img.naturalWidth,
-                        "height": img.naturalHeight
-                    };
-                    log( "Loaded Image w/dimensions " + imageData.width + " x " + imageData.height );
+                    img.onload = function() {
+                        // grab some data from the image
+                        var imageData = {
+                            "width": img.naturalWidth,
+                            "height": img.naturalHeight
+                        };
+                        log( "Loaded Image w/dimensions " + imageData.width + " x " + imageData.height );
+                    }
                     // do your magic here...
                 };
                 reader.readAsDataURL( file );
@@ -62,7 +64,7 @@ fileSelector.onchange = function( e ) {
 };
 
 generateButton.onclick = function( e ) {
-    log( "GENERATED BUTTON CLICKED!! Show this do something else?" );
+    log( "GENERATE BUTTON CLICKED!! Should this do something else?" );
 };
 
 log( "Test application ready" );
