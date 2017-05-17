@@ -16,86 +16,71 @@ vice versa.
 
 ### Goal
 
-You should write a very simple application where there are two scenarios:
+You should write a very simple application that should contain the
+following:
 
-##### Scenario 1.
+1. A component that should be able to display text messages
+2. A component in which the user can write a text message
+3. A component that has a clickable button
 
-* The user can select a photo file from his/her device and import it into the application
-* The user can position and scale this photo on a canvas (note: photo must always cover full canvas size)
-* Hit a submit button which will generate the print description as described below
- (these instructions can be displayed on screen in a text area).
+Component #1 is the most "important" one: when the user writes text
+in component #2 and clicks the submit button, component #1 must show:
+ 
+    User has written "text"
+     
+(Where _text_ is replaced with the content component #2's input field.)
 
-##### Scenario 2.
+When the user clicks the button in component #3, component #1 will show:
 
-* The user can hit an import button which loads a previously saved description
-* Upon loading, the application should show a canvas that contains a photo
-* Photo is scaled and positioned as expected according to the loaded print instructions
+    User has clicked the button!
+
+Now the challenge is to make all these components in a manner that they
+are *unaware of each other*.
+
+In other words: component #2 does not know component #1 exists (and vice
+versa!). How can you structure your code in a way that these components
+work together as a whole? Your code should be written in such a way that
+any of the components listed above could be a separate "mini-application"
+that can be used in any context.
 
 #### Deliverables
 
-Out of the box, the application already provides you some code to load
-and validate image files from your computer. You can take some inspiration
-here, or if you don't like the design approach of that code, feel free
-to show what you think is the "right approach" to code this application.
-Don't write code that just "get's the job done", write it as if was an
-application that you would have to maintain for years to come ;)
+Out of the box, the application already provides you with an HTML template
+that contains all visual components necessary:
 
-It is by no means necessary to make this application look attractive or
-to spend a lot of time in providing the best interaction with the photo.
-If you need to add buttons to “_move photo left_”, "_move photo right_" or
-“_scale photo 50%_", "_scale photo 200%_” that is enough. It is about the
-_design of your code_, NOT the design of the application interface!
+ * div _#messageDisplay_ should be linked to component #1
+ * div _#messageWriter_ should be linked to component #2
+ * div _#buttonClicker_ should be linked to component #3
 
-It is more important to show how you write (in your eyes) a maintainable
-application. It is *not important* to finish all deliverables described
-above, as long as you can show how you would approach reaching that
-state. As such you can use _pseudo code_ where desirable. Be prepared to
-explain the steps you took in a review of this test.
+You don't have to use any package management technology (like Bower/NPM) to
+separate the components into modules. It is enough to use file/folder structure
+to separate your code.
 
-#### Product canvas properties
+It is NOT necessary to make this application look attractive. It
+is about the _design of your code_, NOT the design of the application
+interface!
 
-At Albelli, we define the dimensions of our printed products in inches.
-For this application we will name the product “Canvas” (a single printable surface).
-This Canvas is a rectangle of 15” x 10” in size.
+You are free to use any libraries as you see fit (for instance to
+retrieve form data / update HTML contents), but remember we are interested
+in seeing you use _design patterns_, not your knowledge of libraries.
+As such your applications logic should be written using your _custom code_ (in
+other words: you're working without a framework, keep it simple, but keep
+it maintainable).
 
-A photo must always fill the full surface of the canvas (in other words:
-a photo must cover an area equal to or larger than 15” in width or 10” in height).
+Supply a little documentation on the components you have created. This
+is about describing what the component does and how it could be integrated
+within any type of application.
 
-A photo has the following properties: width, height, x and y (once more
-all in inches). X and Y describe the coordinates of the photo relative
-to the top-left position of its canvas.
+If you get stuck at any point, you can write "pseudo code", where you
+basically explain in English what should happen at that point in the code.
 
-#### Print description
-
-The print description you will generate (in scenario #1 of your application)
-can be in any format of your liking, as an example you could consider
-the following output in JSON format:
-
-    {
-        "canvas": {
-            "width": 15
-            "height": 10,
-            "photo" : {
-                "id": “fileName”,
-                "width": 20,
-                "height": 20,
-                "x": -2.5,
-                "y": -5
-            }
-        }
-    }
+Be prepared to explain the steps you took in a review of this test.
 
 #### Rules
 
 Once you receive this test by e-mail you must fork this repository to
 your own GitHub account in which you will write your test.
 
-You are free to use any libraries that make your life easier. However
-be sure to write your own logic for the part that is "Albelli unique" code.
-You can use a framework, but we are more interested in seeing how you
-would structure things if you didn't have a framework that defines the
-design pattern for you.
- 
 Your application should run on the latest public version of Google Chrome.
 You don't have to worry about making your code work on any other browser, as
 such you are free to use anything that is supported by Chrome and not worry
@@ -133,7 +118,7 @@ runner). by typing:
     
 The following will happen:
 
- * All JavaScript is included and built for the browser
+ * All JavaScript is included and built for the browser (you may use ES6)
  * All SASS styles are converted into CSS
  * Your browser will open and run the application
  * File watchers are started:
@@ -145,4 +130,4 @@ The following will happen:
 You can add / remove / change files to in the source folder and your
 browser will automatically update to reflect the changes.
 
-You can use your favourite editor to edit your files.
+You can of course use your favourite editor to edit your files.

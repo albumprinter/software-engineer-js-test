@@ -7,28 +7,38 @@
         <link rel="stylesheet" href="./app/css/styles.css" media="all" />
     </head>
     <body>
+
         <h1>Test application</h1>
         <p>
-            Your application is ready. There should be a message in your browsers
-            console indicating the JavaScript application has loaded.
+            Your console should display a ready message when all JavaScript
+            has loaded.
         </p>
-        <form action="#">
-            <fieldset>
-                <label for="fileSelector">Select an Image file</label>
-                <input type="file" id="fileSelector" />
-            </fieldset>
-        </form>
-        <div class="column left">
-            <div id="imageContainer">
-                <!-- will hold photos -->
-            </div>
-            <button id="generateButton">Generate!</button>
-        </div>
-        <div class="column right">
-            <div id="debugContainer">
-                <!-- will hold debug messages -->
+
+        <!-- window that should display all messages -->
+        <div id="messageDisplay" class="component">
+            <h2>Messages</h2>
+            <div class="messages">
+                Messages should appear here.
             </div>
         </div>
+
+        <!-- form that should send text -->
+        <div id="messageWriter" class="component">
+            <h2>Text writer</h2>
+            <form action="#">
+                <label for="messageInput">Message</label>
+                <input id="messageInput" type="text" placeholder="Your message here..." />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+        <!-- component that knows when you have clicked a button -->
+        <div id="buttonClicker" class="component">
+            <h2>Button clicker</h2>
+            <button>Click me!</button>
+        </div>
+
+        <!-- JavaScript application entry point (generated automatically) -->
         <script type="text/javascript" src="./app/js/main.js"></script>
     </body>
 </html>
