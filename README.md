@@ -28,7 +28,7 @@ You should write a very simple application where there are two scenarios:
 ##### Scenario 2.
 
 * The user can hit an import button which loads a previously saved description
-* Upon loading, the application should show a canvas that contains a photo
+* Upon loading, the application should show a canvas that contains the photo
 * Photo is scaled and positioned as expected according to the loaded print instructions
 
 #### Deliverables
