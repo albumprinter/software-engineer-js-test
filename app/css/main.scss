@@ -25,8 +25,15 @@ body {
 }
 
 #imageContainer {
-  img {
-    width: 100%;
+  height: 400px;
+  overflow: hidden;
+  canvas {
+    transform: scale(0.1);
+    transform-origin: top left;
+    border: 100px solid red;
+    &.is-rotated {
+      transform: scale(0.1) rotate(-90deg) translate(-100%, 0);
+    }
   }
 }
 
@@ -35,4 +42,10 @@ body {
     margin: 0;
     padding: 0;
   }
+}
+
+
+textarea {
+  width: 100%;
+  height: 200px;
 }

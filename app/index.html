@@ -21,8 +21,18 @@
         <div class="column left">
             <div id="imageContainer">
                 <!-- will hold photos -->
+                <canvas id="photo" width="4500" height="3000"></canvas>
             </div>
-            <button id="generateButton">Generate!</button>
+            <button id="generateButton">Generate Description</button>
+            <button id="saveButton">Save</button>
+            <button id="loadButton">Load Description!</button>
+            <button class="move-button" data-dir="LEFT">Move Left</button>
+            <button class="move-button" data-dir="RIGHT">Move Right</button>
+            <button class="move-button" data-dir="UP">Move Up</button>
+            <button class="move-button" data-dir="DOWN">Move Down</button>
+            <button class="scale-button" data-value="0.5">Scale 50%</button>
+            <button class="scale-button" data-value="2">Scale 200%</button>
+            <textarea id="description" disabled></textarea>
         </div>
         <div class="column right">
             <div id="debugContainer">
