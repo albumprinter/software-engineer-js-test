@@ -87,7 +87,7 @@ the following output in JSON format:
 
 #### Rules
 
-Once you receive this test by e-mail you must fork this repository to
+Once you receive this test by e-mail you must copy this repository to
 your own GitHub account in which you will write your test.
 
 You are free to use any libraries that make your life easier. However
@@ -103,8 +103,7 @@ about cross-browser implementations.
 
 ## Project outline
 
-The entry point for your JavaScript application is _./js/main.js_. You can use the
-CommonJS require/exports pattern to include dependencies. The build script
+The entry point for your JavaScript application is _./js/main.js_. The build script
 will ensure these get automatically built for use in your browser.
 
 The project uses SASS as a preprocessor for writing your styles (though you can
@@ -126,10 +125,9 @@ the command line using:
 
     npm install
     
-You can now start developing the application using Gulp (build system/task
-runner). by typing:
+You can now start developing the application using Webpack. by typing:
 
-    gulp dev
+    npm start
     
 The following will happen:
 
