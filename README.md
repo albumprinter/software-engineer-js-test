@@ -47,9 +47,7 @@ If you need to add buttons to “_move photo left_”, "_move photo right_" or
 _design of your code_, NOT the design of the application interface!
 
 It is more important to show how you write (in your eyes) a maintainable
-application. It is *not important* to finish all deliverables described
-above, as long as you can show how you would approach reaching that
-state. As such you can use _pseudo code_ where desirable. Be prepared to
+application. As such you can use _pseudo code_ where desirable. Be prepared to
 explain the steps you took in a review of this test.
 
 #### Product canvas properties
