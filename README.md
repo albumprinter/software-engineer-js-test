@@ -20,7 +20,7 @@ You should write a very simple application where there are two scenarios:
 ##### Scenario 1.
 
 * The user can select a photo file from his/her device and import it into the application
-* The user can position and scale this photo on a canvas (note: photo must always cover the entire canvas without any spaces on the sides)
+* The user can position and scale this photo on a canvas (note: photo must always cover full canvas size)
 * Hit a submit button which will generate the print description as described [below](https://github.com/albumprinter/software-engineer-js-test/tree/photo-editor#print-description)
  These instructions should be stored locally as a JSON file.
 
@@ -87,8 +87,7 @@ Once you receive this test by e-mail please copy this repository to
 your own GitHub account.
 
 You can use any libraries / frameworks that make your life easier, but strictly speaking they are not necessary. 
-We are more interested in seeing how you would structure things if you didn't have a framework that defines the
-design pattern for you.
+We are more interested in seeing how you would structure things.
  
 Your application should run on the latest public version of Google Chrome.
 You don't have to worry about making your code work on any other browser, as
