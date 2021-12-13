@@ -1,0 +1,26 @@
+{
+  "name": "live-coding-exercise",
+  "version": "1.0.0",
+  "description": "This repository contains several different tests to be used for software engineer vacancies. Each of the tests is in a different branch. Each of the branches contain a basic setup for a JavaScript project. This ranges from either a simple index.html file or to self contained NPM modules.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "parcel serve index.html",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albumprinter/software-engineer-js-test.git"
+  },
+  "author": "Rasul Niyazimbetov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albumprinter/software-engineer-js-test/issues"
+  },
+  "homepage": "https://github.com/albumprinter/software-engineer-js-test#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
