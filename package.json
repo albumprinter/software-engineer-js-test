@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel serve index.html",
-    "test": "npm run test"
+    "test": "jest -- tests/canvas.test.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,14 @@
   },
   "homepage": "https://github.com/albumprinter/software-engineer-js-test#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.4",
+    "jest": "^27.4.4",
     "parcel": "^2.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }
