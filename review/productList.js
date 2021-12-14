@@ -16,7 +16,7 @@ export class ProductComponent {
   getCalendar() {
     var calendar = null;
     var index = 0;
-    while(calendar) {
+    while(!calendar) {
       const product = this.result["json"][index];
       if (product !== undefined && (product["articleType"] = "calendar")) {
         if (product["disabled"] !== false) {
@@ -32,7 +32,7 @@ export class ProductComponent {
   getPhotobook() {
     var calendar = null;
     var index = 0;
-    while(calendar) {
+    while(!calendar) {
       const product = this.result["json"][index];
       if (product !== undefined && (product["articleType"] == "photobook")) {
         if (product["disabled"] !== false || product["disabled"] !== "false") {
@@ -48,7 +48,7 @@ export class ProductComponent {
   getCanvas() {
     var canvas = null;
     var index = 0;
-    while(canvas) {
+    while(!canvas) {
       const product = this.result["json"][index];
       if (product !== undefined && (product["articleType"] == "canvas")) {
         canvas = product

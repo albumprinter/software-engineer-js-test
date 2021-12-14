@@ -23,4 +23,5 @@ Implement a component that handles retrieving a product list form internal api.
 * a component should have minimum api requests as possible. Since api response is static, it is possible to cache it
 * a component should be able to handle api error responses
 * a consumer should be able to pass an argument to get list of specific product
+* a component should return only not disabled products in the list
 * all tests should pass
