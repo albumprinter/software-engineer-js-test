@@ -20,8 +20,7 @@ Implement a component that handles retrieving a product list form internal api.
 ```
 
 ### requirements
-* a component should have method for api calls
-* a component should have minimum api requests as possible
-* if component should be able to handle api error responses
+* a component should have minimum api requests as possible. Since api response is static, it is possible to cache it
+* a component should be able to handle api error responses
 * a consumer should be able to pass an argument to get list of specific product
 * all tests should pass

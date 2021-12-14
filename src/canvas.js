@@ -43,39 +43,6 @@
  
  export function fitImagesToCanvas(canvas, images, minSize = 1) {
    // implement logic here
-   const canvasArea = canvas.width * canvas.height;
-
-   // first, if some images are bigger than canvas sides, we need to scale them down
-   const scaledImages = images.map(image => {
-     const isWidthBigger = image.width > image.height;
-     // is image bigger than canvas?
-     let ratio = 1;
-     if (image.width > canvas.image || image.height > canvas.height) {
-       ratio = isWidthBigger ? (canvas.width / image.width) : (canvas.height / image.height)
-     }
-     const scaledImage = {
-       width: image.width * ratio,
-       height: image.height * ratio
-     }
- 
-     return scaledImage;
-   })
- 
-   // calculate total area of images
-   const totalArea = scaledImages.reduce((subTotal, image) => {
-     const imageArea = image.width * image.height;
-     const total = subTotal + imageArea;
-     return total;
-   }, 0);
- 
-   // calculate the ratio of images
-   const ratio = canvasArea < totalArea ? canvasArea / totalArea : totalArea / canvasArea;
-   return scaledImages.map(image => {
-     return {
-       width: Math.round(image.width * ratio),
-       height: Math.round(image.height * ratio)
-     }
-   })
  }
 
  
