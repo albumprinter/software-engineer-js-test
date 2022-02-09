@@ -21,6 +21,14 @@ You should write a very simple application where there are two scenarios:
 
 * The user can select a photo file from his/her device and import it into the application
 * The user can position and scale this photo on a canvas. Important: Photo must always cover the full canvas.
+  * Correct:
+
+  ![correct](./doc/correct.png)
+
+  * Not correct:
+
+  ![not correct](./doc/not_correct.png)
+
 * Hit a submit button which will generate the print description as described [below](https://github.com/albumprinter/software-engineer-js-test/tree/photo-editor#print-description)
  These instructions should be stored locally as a JSON file.
 
