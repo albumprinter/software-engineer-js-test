@@ -1,6 +1,5 @@
 import React from 'react';
 import {useState, useEffect, useRef} from 'react';
-import {importPhotos} from '../import-files';
 
 export const PhotoEditor = () => {
 	const [image, setImage] = useState<HTMLImageElement>();
@@ -19,9 +18,9 @@ export const PhotoEditor = () => {
 		}
 	}, [image]);
 
-	const handlePhotoUpload = async () => {
+	const handlePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 		// get all selected Files
-		const files = await importPhotos();
+		const files = e.target.files as FileList;
 		let file;
 		for ( let i = 0; i < files.length; ++i ) {
 			file = files[ i ];
@@ -41,7 +40,6 @@ export const PhotoEditor = () => {
 					reader.readAsDataURL( file );
 					// process just one file
 					return;
-
 			}
 		}
 	};
@@ -50,7 +48,8 @@ export const PhotoEditor = () => {
 		<>
 			<div>
 				<h1>Photo Editor</h1>
-				<button onClick={handlePhotoUpload}>Upload Images</button>
+				<label htmlFor="fileSelector">Upload Images</label>
+				<input type="file" id="fileSelector" onChange={handlePhotoUpload} />
 			</div>
 			<canvas ref={canvasRef} />
 		</>
