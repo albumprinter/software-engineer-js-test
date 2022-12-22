@@ -1,6 +1,5 @@
 .idea
 *.iml
-.project
-.settings
 dist/
 node_modules
+.parcel-cache

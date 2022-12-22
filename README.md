@@ -1,17 +1,17 @@
 # Albelli test
 
-**Read this entire document carefully.**
+**Please read this entire document carefully.**
 
 This repository contains a basic setup for a JavaScript project. 
 See "_System requirements_" below to get up  and running!
-The "_Project outline_" section walks you through a basic  rundown of the structure.
+The "_Project outline_" section walks you through a basic rundown of the structure.
 
 ## The test
 
 You will be working in a company where our customers purchase printed products.
 As such your expertise should not be restricted to developing applications,
 but also extend to understand the requirements
-of print and how to translate between the app and the print world and  vice versa.
+of print and how to translate between the app and the print world and vice versa.
 
 ### Goal
 
@@ -19,12 +19,12 @@ You should write a very simple application where there are two scenarios:
 
 ##### Scenario 1.
 
-* The application have a fixed size canvas where your application will show images
-* The user can select a photo file from his/her device and import it into the application
+* The application has a fixed size canvas on which the image will be rendered
+* User can select a photo file from his/her device and import it into the application
   * The photo must fill entirely the fixed size canvas.
     If the application have a landscape canvas and a portrait image is uploaded,
-    then only the middle of photo is drawn on the canvas
-* The user can position and scale (zoom) this photo on a canvas. **Important**: Photo must always cover the full canvas.
+    then only the middle of the photo is drawn on the canvas
+* The user can position (move) this photo on a canvas. **Important**: The photo should always cover the entire canvas, there should be no white space around the image..
   * Correct:
 
   ![correct](./doc/correct.png)
@@ -33,13 +33,7 @@ You should write a very simple application where there are two scenarios:
 
   ![not correct](./doc/not_correct.png)
 
-  When you are zooming the photo it is not allowed to make the image smaller, than the canvas.
-  In that case the zoom button should not allow any downsizing.
-
-  * Think about scenarios, like zoom in the image, then move it to right, then zoom out.
-    Still the image should cover the entire canvas.
-
-* Hit a submit button which will generate the print description as described
+* User can hit the export button which will generate the print description as described
   [below](https://github.com/albumprinter/software-engineer-js-test/tree/photo-editor#print-description)
   These instructions should be stored locally as a JSON file.
 
@@ -48,7 +42,7 @@ You should write a very simple application where there are two scenarios:
 * The user can hit an import button which loads a previously saved JSON description
 * Upon loading, the application should show a canvas that contains the photo
 * Photo is scaled and positioned as expected according to the loaded print instructions
-* Customer should be able to further modify the image
+* The user should be able to further modify the image
 
 #### Deliverables
 
@@ -61,8 +55,7 @@ application that you would have to maintain for years to come ;)
 
 It is by no means necessary to make this application look attractive or
 to spend a lot of time in providing the best interaction with the photo.
-If you need to add buttons to “_move photo left_”, "_move photo right_" or
-“_scale photo 50%_", "_scale photo 200%_” that is enough. It is about the
+If you need to add buttons to “_move photo left_”, "_move photo right_" is enough. It is about the
 _design of your code_, NOT the design of the application interface!
 
 It is more important to show how you write (in your eyes) a maintainable
@@ -70,7 +63,7 @@ application. Be prepared to explain the steps you took in a review of this test.
 
 It is preferred to use **React** and **TypeScript**.
 
-Don't forget to add the necessary **documentations** and **tests**.
+Don't forget to cover development with **tests**.
 
 #### Product canvas properties
 
@@ -95,7 +88,8 @@ Example:
             "width": 15
             "height": 10,
             "photo" : {
-                "id": “fileName”,
+                "id": "string",
+                "src": "base64-encoded-image",
                 "width": 20,
                 "height": 20,
                 "x": -2.5,
@@ -113,19 +107,17 @@ You don't have to worry about making your code work on any other browser, as
 such you are free to use anything that is supported by Chrome and not worry
 about cross-browser implementations.
 
-Although it is always good to make a code that is cross-browser compatible (Edge, Firefox, Safari).
-
 ## Project outline
 
-The entry point for your JavaScript application is _./app/js/main.js_. The build script
-will ensure these get automatically built for use in your browser.
+The entry point for your React application is _./app/index.html_. 
 
-The project uses SASS as a preprocessor for writing your styles (though you can
-write regular CSS inside a .scss file if you would like to). If you choose to use CSS,
-you can use _./app/css/main.scss_ as your entry point SASS file.
+Parcel is used to bundle tha application.
+It has a development server built in, which will automatically rebuild the application as you make changes.
 
-Using `npm run build` all build output will be stored in the _./dist_ folder, this is
-automatically generated by the build script and its contents can be ignored.
+## Tests
+
+Jest is packaged in this application for writing and running tests, but feel free to use any framework/runner of your choice
+Spec file _./app/components/photo-editor/index.spec.ts_
 
 ## System requirements
 
@@ -134,41 +126,11 @@ In order to build the project you will need [Node.js](https://nodejs.org/en/).
 In the root of this repository, you can resolve all these dependencies via
 the command line using:
 
-    npm install
+    yarn install
     
-You can now start developing the application using Webpack by typing:
+You can now start developing the application using Parcel by typing:
 
-    npm start
-    
-The following will happen:
+    yarn start
 
- * All JavaScript is included and built for the browser
- * All SASS styles are converted into CSS
- * Your browser will open and run the application
- * File watchers are started
-
-You can add / remove / change files to in the source folder and your
-browser will automatically update to reflect the changes.
-
-## Check before submitting your code
-
-### Scenarios
-* Customer can upload photos and they are showing on canvas
-  * The photos can have landscape, portrait or square formats
-  * The photos can have small and large sizes (in pixels)
-  * Application can handle all files without breaking
-* Customer can move and scale the photo
-  * The photo is always covering the entire canvas
-* Customer able to export JSON file with print description
-* Customer able to import JSON file with print description
-  * Then the correct photo is showing on canvas with correct position and scale
-* Customer able to modify the photo after import
-
-If the above scenarios are not working, then your code is not ready to be submitted.
-
-### Code
-* You used React and TypeScript
-* Your code has documentation
-* Your code has tests
 
 **We wish you success with your test!**
