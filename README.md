@@ -56,7 +56,7 @@ _design of your code_, NOT the design of the application interface!
 It is more important to show how you write (in your eyes) a maintainable
 application. Be prepared to explain the steps you took in a review of this test.
 
-Don't forget to add the necessary documentations and tests.
+Don't forget to cover development with **tests**.
 
 #### Product canvas properties
 
@@ -73,16 +73,16 @@ to the top-left position of its canvas.
 
 #### Print description
 
-The print description you will generate (in scenario #1 of your application)
-can be in any format of your liking, as an example you could consider
-the following output in JSON format:
+The print description you will generate (in scenario #1 of your application) can be in JSON format.
+Example:
 
     {
         "canvas": {
             "width": 15
             "height": 10,
             "photo" : {
-                "id": “fileName”,
+                "id": "string",
+                "src": "base64-encoded-image",
                 "width": 20,
                 "height": 20,
                 "x": -2.5,
@@ -123,11 +123,11 @@ In order to build the project you will need [Node.js](https://nodejs.org/en/).
 In the root of this repository, you can resolve all these dependencies via
 the command line using:
 
-    npm install
+    yarn install
     
 You can now start developing the application using Webpack by typing:
 
-    npm start
+    yarn start
     
 The following will happen:
 

@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -10,24 +10,22 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        stats: { colors: true },
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
         hot: true,
         open: true,
         port: 8090,
-        contentBase: path.join(__dirname, 'dist')
     },
     module: {
         rules: [
             { 
-                test: /\.js$/, 
-                loader: "babel-loader",
-                options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    "@babel/plugin-proposal-class-properties",
-                    "@babel/plugin-proposal-optional-chaining",
-                    "@babel/plugin-proposal-nullish-coalescing-operator"
-                ]
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             },
             {
