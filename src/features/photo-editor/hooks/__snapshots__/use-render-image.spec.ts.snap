@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useRenderImage should draw an exported image which size exceeds canvas 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": 0,
+      "dy": -240,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": -48,
+      "dy": -48,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 4032,
+      "dWidth": 3024,
+      "dx": -792,
+      "dy": -1536,
+      "img": <img
+        height="4032"
+        width="3024"
+      />,
+      "sHeight": 4032,
+      "sWidth": 3024,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 4032,
+      "dWidth": 3024,
+      "dx": -792,
+      "dy": -1536,
+      "img": <img
+        height="4032"
+        width="3024"
+      />,
+      "sHeight": 4032,
+      "sWidth": 3024,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useRenderImage should draw an exported image which width, size or both fits into canvas 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": 0,
+      "dy": -240,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": -48,
+      "dy": -48,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useRenderImage should draw an image whose size exceeds canvas 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": 0,
+      "dy": -240,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": -48,
+      "dy": -48,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 4032,
+      "dWidth": 3024,
+      "dx": -792,
+      "dy": -1536,
+      "img": <img
+        height="4032"
+        width="3024"
+      />,
+      "sHeight": 4032,
+      "sWidth": 3024,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useRenderImage should draw an image whose width, size, or both fits into the canvas 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 320,
+      "dWidth": 320,
+      "dx": 0,
+      "dy": -240,
+      "img": <img
+        height="320"
+        width="320"
+      />,
+      "sHeight": 320,
+      "sWidth": 320,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;

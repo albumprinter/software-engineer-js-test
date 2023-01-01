@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useShiftHandlers should shift an image to the bottom 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -265,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -215,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -240,
+      "dy": -455,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -240,
+      "dy": -505,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useShiftHandlers should shift an image to the left 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -265,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useShiftHandlers should shift an image to the right 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -265,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -215,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`useShiftHandlers should shift an image to the top 1`] = `
+[
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -265,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -215,
+      "dy": -480,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  {
+    "props": {
+      "dHeight": 0,
+      "dWidth": 0,
+      "dx": -240,
+      "dy": -455,
+      "img": <img />,
+      "sHeight": 0,
+      "sWidth": 0,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
