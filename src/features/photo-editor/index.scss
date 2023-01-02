@@ -1,0 +1,9 @@
+.photo-editor {
+  width: fit-content;
+
+  &__transfer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
