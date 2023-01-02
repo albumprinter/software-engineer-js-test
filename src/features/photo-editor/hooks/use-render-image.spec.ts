@@ -1,9 +1,9 @@
-import { renderHook, act } from "@testing-library/react-hooks";
-import { useRenderImage } from "./use-render-image";
-import "jest-canvas-mock";
+import { renderHook, act } from '@testing-library/react-hooks';
+import { useRenderImage } from './use-render-image';
+import 'jest-canvas-mock';
 
-const canvasElement = document.createElement("canvas");
-const ctx = canvasElement?.getContext("2d");
+const canvasElement = document.createElement('canvas');
+const ctx = canvasElement?.getContext('2d');
 
 const mockProps = {
   canvasRef: {
@@ -16,16 +16,16 @@ const mockProps = {
   setImageSize: jest.fn(),
 };
 
-describe("useRenderImage", () => {
-  it("should return handler for rendering an image", () => {
+describe('useRenderImage', () => {
+  it('should return handler for rendering an image', () => {
     const {
       result: { current: renderImage },
     } = renderHook(() => useRenderImage(mockProps));
 
-    expect(typeof renderImage).toBe("function");
+    expect(typeof renderImage).toBe('function');
   });
 
-  it("should not draw an image as canvas reference is null", () => {
+  it('should not draw an image as canvas reference is null', () => {
     const renderImageProps = {
       image: new Image(320, 320),
       xImageAxis: 0,
@@ -53,7 +53,7 @@ describe("useRenderImage", () => {
     expect(calls).toHaveLength(0);
   });
 
-  it("should draw an image whose width, size, or both fits into the canvas", () => {
+  it('should draw an image whose width, size, or both fits into the canvas', () => {
     const renderImageProps = {
       image: new Image(320, 320),
       xImageAxis: 0,
@@ -74,7 +74,7 @@ describe("useRenderImage", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should draw an exported image which width, size or both fits into canvas", () => {
+  it('should draw an exported image which width, size or both fits into canvas', () => {
     const renderImageProps = {
       image: new Image(320, 320),
       xImageAxis: -48,
@@ -95,7 +95,7 @@ describe("useRenderImage", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should draw an image whose size exceeds canvas", () => {
+  it('should draw an image whose size exceeds canvas', () => {
     const renderImageProps = {
       image: new Image(3024, 4032),
       xImageAxis: 0,
@@ -116,7 +116,7 @@ describe("useRenderImage", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should draw an exported image which size exceeds canvas", () => {
+  it('should draw an exported image which size exceeds canvas', () => {
     const renderImageProps = {
       image: new Image(3024, 4032),
       xImageAxis: -48,

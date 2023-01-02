@@ -1,10 +1,10 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import FileSaver from "file-saver";
+import { render, screen, fireEvent } from '@testing-library/react';
+import FileSaver from 'file-saver';
 
-import { EXPORTED_FILE_NAME } from "../../constants";
-import ExportButton from "./index";
+import { EXPORTED_FILE_NAME } from '../../constants';
+import ExportButton from './index';
 
-jest.mock("file-saver", () => ({ saveAs: jest.fn() }));
+jest.mock('file-saver', () => ({ saveAs: jest.fn() }));
 
 const mockProps = {
   imageSize: {
@@ -15,16 +15,16 @@ const mockProps = {
     xImageAxis: -240,
     yImageAxis: -480,
   },
-  imageSrc: "src",
+  imageSrc: 'src',
   canvasRef: {
-    current: document.createElement("canvas"),
+    current: document.createElement('canvas'),
   },
 };
 
-describe("ExportButton", () => {
-  const btnTitle = "Export";
+describe('ExportButton', () => {
+  const btnTitle = 'Export';
 
-  it("should render component properly", () => {
+  it('should render component properly', () => {
     render(<ExportButton {...mockProps} />);
 
     const buttonElement = screen.getByText(btnTitle);
@@ -32,7 +32,7 @@ describe("ExportButton", () => {
     expect(buttonElement).toBeVisible();
   });
 
-  it("should render disabled button", () => {
+  it('should render disabled button', () => {
     render(
       <ExportButton
         {...mockProps}
@@ -43,10 +43,10 @@ describe("ExportButton", () => {
     const buttonElement = screen.getByText(btnTitle);
 
     expect(buttonElement).toBeVisible();
-    expect(buttonElement).toHaveAttribute("disabled");
+    expect(buttonElement).toHaveAttribute('disabled');
   });
 
-  it("should call file saver", () => {
+  it('should call file saver', () => {
     render(<ExportButton {...mockProps} />);
 
     const buttonElement = screen.getByText(btnTitle);

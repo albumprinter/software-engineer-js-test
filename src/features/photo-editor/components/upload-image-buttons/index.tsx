@@ -1,42 +1,45 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-import { useFileUpload } from "./hooks/use-file-upload";
-import { TestIds } from "./constants";
-import { ImageParams } from "../../types";
+import { useFileUpload } from './hooks/use-file-upload';
+import { TestIds } from './constants';
+import { ImageParams } from '../../types';
 
-import "./index.scss";
+import './index.scss';
 
 type UploadImageProps = {
   onImageUpload: (params: ImageParams) => void;
 };
 
-const UploadImageButtons = ({
-  onImageUpload,
-}: UploadImageProps): JSX.Element => {
+function UploadImageButtons({ onImageUpload }: UploadImageProps): JSX.Element {
   const handleFileUpload = useFileUpload(onImageUpload);
+
+  // TODO: Fix styles
 
   return (
     <>
-      <label htmlFor="fileSelector" className="upload-buttons__label">
+      <label htmlFor='fileSelector'>
         Upload Image
+        <input
+          className='upload-buttons__input'
+          data-testid={TestIds.FileSelector}
+          type='file'
+          id='fileSelector'
+          onChange={handleFileUpload}
+        />
       </label>
-      <input
-        data-testid={TestIds.FileSelector}
-        type="file"
-        id="fileSelector"
-        onChange={handleFileUpload}
-      />
-      <label htmlFor="descriptionSelector" className="upload-buttons__label">
+
+      <label htmlFor='descriptionSelector'>
         Upload Image Description
+        <input
+          className='upload-buttons__input'
+          data-testid={TestIds.DescriptionSelector}
+          type='file'
+          id='descriptionSelector'
+          onChange={handleFileUpload}
+        />
       </label>
-      <input
-        data-testid={TestIds.DescriptionSelector}
-        type="file"
-        id="descriptionSelector"
-        onChange={handleFileUpload}
-      />
     </>
   );
-};
+}
 
 export default memo(UploadImageButtons);

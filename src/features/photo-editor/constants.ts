@@ -1,10 +1,10 @@
-export const IMAGE_JPEG_MIME_TYPE = "image/jpeg";
-export const IMAGE_PNG_MIME_TYPE = "image/png";
-export const IMAGE_GIF_MIME_TYPE = "image/gif";
+export const IMAGE_JPEG_MIME_TYPE = 'image/jpeg';
+export const IMAGE_PNG_MIME_TYPE = 'image/png';
+export const IMAGE_GIF_MIME_TYPE = 'image/gif';
 
-export const JSON_MIME_TYPE = "application/json";
+export const JSON_MIME_TYPE = 'application/json';
 
-export const EXPORTED_FILE_NAME = "description.json";
+export const EXPORTED_FILE_NAME = 'description.json';
 
 export const ALLOWED_IMAGE_MIME_TYPES: readonly string[] = [
   IMAGE_JPEG_MIME_TYPE,

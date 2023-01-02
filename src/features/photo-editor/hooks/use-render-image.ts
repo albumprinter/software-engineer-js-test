@@ -1,7 +1,7 @@
-import { useCallback } from "react";
+import { useCallback } from 'react';
 
-import { CANVAS_WIDTH, CANVAS_HEIGHT } from "../constants";
-import { ImageParams, Coordinates, ImageSize } from "../types";
+import { CANVAS_WIDTH, CANVAS_HEIGHT } from '../constants';
+import { ImageParams, Coordinates, ImageSize } from '../types';
 
 type RenderImage = (params: ImageParams) => void;
 type UseRenderImageParams = {
@@ -36,7 +36,7 @@ export const useRenderImage = ({
       if (!canvasRef.current) return;
 
       const { current: canvas } = canvasRef;
-      const ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext('2d');
 
       if (!ctx) return;
 

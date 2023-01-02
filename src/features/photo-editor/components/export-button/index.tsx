@@ -1,9 +1,9 @@
-import { useCallback, memo } from "react";
-import { saveAs } from "file-saver";
+import { useCallback, memo } from 'react';
+import { saveAs } from 'file-saver';
 
-import { JSON_MIME_TYPE, EXPORTED_FILE_NAME } from "../../constants";
-import { ImageSize, Coordinates } from "../../types";
-import { getImageDescription } from "./utils/get-image-description";
+import { JSON_MIME_TYPE, EXPORTED_FILE_NAME } from '../../constants';
+import { ImageSize, Coordinates } from '../../types';
+import { getImageDescription } from './utils/get-image-description';
 
 type ExportButtonProps = {
   canvasRef: React.RefObject<HTMLCanvasElement>;
@@ -12,12 +12,12 @@ type ExportButtonProps = {
   imageCoordinates: Coordinates;
 };
 
-const ExportButton = ({
+function ExportButton({
   canvasRef,
   imageSize,
   imageSrc,
   imageCoordinates,
-}: ExportButtonProps): JSX.Element => {
+}: ExportButtonProps): JSX.Element {
   const isExportButtonDisabled = !canvasRef.current || !imageSrc;
 
   // The handle for creating and saving an image description
@@ -40,10 +40,14 @@ const ExportButton = ({
   }, [imageCoordinates, imageSize, imageSrc, isExportButtonDisabled]);
 
   return (
-    <button onClick={handleExport} disabled={isExportButtonDisabled}>
+    <button
+      type='button'
+      onClick={handleExport}
+      disabled={isExportButtonDisabled}
+    >
       Export
     </button>
   );
-};
+}
 
 export default memo(ExportButton);

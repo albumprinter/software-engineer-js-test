@@ -1,13 +1,13 @@
-import { renderHook, act } from "@testing-library/react-hooks";
-import "jest-canvas-mock";
+import { renderHook, act } from '@testing-library/react-hooks';
+import 'jest-canvas-mock';
 
-import { useShiftHandlers } from "./use-shift-handlers";
-import { mockShiftButtonsProps } from "../mocks";
+import { useShiftHandlers } from './use-shift-handlers';
+import { mockShiftButtonsProps } from '../mocks';
 
-describe("useShiftHandlers", () => {
-  const ctx = mockShiftButtonsProps.canvasRef.current?.getContext("2d");
+describe('useShiftHandlers', () => {
+  const ctx = mockShiftButtonsProps.canvasRef.current?.getContext('2d');
 
-  it("should define handlers", () => {
+  it('should define handlers', () => {
     const {
       result: { current: handlers },
     } = renderHook(() => useShiftHandlers(mockShiftButtonsProps));
@@ -15,7 +15,7 @@ describe("useShiftHandlers", () => {
     expect(handlers).toBeDefined();
   });
 
-  it("should shift an image to the left", () => {
+  it('should shift an image to the left', () => {
     const {
       result: {
         current: { handleMoveLeft },
@@ -31,7 +31,7 @@ describe("useShiftHandlers", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should shift an image to the right", () => {
+  it('should shift an image to the right', () => {
     const {
       result: {
         current: { handleMoveRight },
@@ -47,7 +47,7 @@ describe("useShiftHandlers", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should shift an image to the top", () => {
+  it('should shift an image to the top', () => {
     const {
       result: {
         current: { handleMoveUp },
@@ -63,7 +63,7 @@ describe("useShiftHandlers", () => {
     expect(calls).toMatchSnapshot();
   });
 
-  it("should shift an image to the bottom", () => {
+  it('should shift an image to the bottom', () => {
     const {
       result: {
         current: { handleMoveDown },

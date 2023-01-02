@@ -2,12 +2,12 @@ import {
   PIXELS_PER_INCH,
   IMAGE_HEIGHT_IN_INCHES,
   IMAGE_WIDTH_IN_INCHES,
-} from "../../../constants";
+} from '../../../constants';
 import {
   UploadedImageDescription,
   ImageSize,
   Coordinates,
-} from "../../../types";
+} from '../../../types';
 
 type GetImageDescriptionParams = {
   imageSrc: string;

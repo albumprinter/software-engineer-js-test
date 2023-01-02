@@ -2,10 +2,10 @@ import {
   PIXELS_PER_INCH,
   IMAGE_HEIGHT_IN_INCHES,
   IMAGE_WIDTH_IN_INCHES,
-} from "../../../constants";
-import { getImageDescription } from "./get-image-description";
+} from '../../../constants';
+import { getImageDescription } from './get-image-description';
 
-const imageSrc = "src";
+const imageSrc = 'src';
 const imageWidth = 1440;
 const imageHeight = 960;
 const xImageAxis = -240;
@@ -23,33 +23,33 @@ const mockParams = {
   imageSrc,
 };
 
-describe("getImageDescription", () => {
-  it("should return image description object", () => {
+describe('getImageDescription', () => {
+  it('should return image description object', () => {
     const imageDescription = getImageDescription(mockParams);
 
-    expect(imageDescription).toHaveProperty("canvas.photo.src", imageSrc);
+    expect(imageDescription).toHaveProperty('canvas.photo.src', imageSrc);
     expect(imageDescription).toHaveProperty(
-      "canvas.width",
+      'canvas.width',
       IMAGE_WIDTH_IN_INCHES
     );
     expect(imageDescription).toHaveProperty(
-      "canvas.height",
+      'canvas.height',
       IMAGE_HEIGHT_IN_INCHES
     );
     expect(imageDescription).toHaveProperty(
-      "canvas.photo.width",
+      'canvas.photo.width',
       imageWidth / PIXELS_PER_INCH
     );
     expect(imageDescription).toHaveProperty(
-      "canvas.photo.height",
+      'canvas.photo.height',
       imageHeight / PIXELS_PER_INCH
     );
     expect(imageDescription).toHaveProperty(
-      "canvas.photo.x",
+      'canvas.photo.x',
       xImageAxis / PIXELS_PER_INCH
     );
     expect(imageDescription).toHaveProperty(
-      "canvas.photo.y",
+      'canvas.photo.y',
       yImageAxis / PIXELS_PER_INCH
     );
   });

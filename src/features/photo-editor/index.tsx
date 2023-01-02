@@ -1,15 +1,15 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback } from 'react';
 
-import { useRenderImage } from "./hooks/use-render-image";
+import { useRenderImage } from './hooks/use-render-image';
 
-import ExportButton from "./components/export-button";
-import ShiftButtons from "./components/shift-buttons";
-import UploadImageButtons from "./components/upload-image-buttons";
-import { Coordinates, ImageSize, ImageParams } from "./types";
+import ExportButton from './components/export-button';
+import ShiftButtons from './components/shift-buttons';
+import UploadImageButtons from './components/upload-image-buttons';
+import { Coordinates, ImageSize, ImageParams } from './types';
 
-import "./index.scss";
+import './index.scss';
 
-const PhotoEditor = (): JSX.Element => {
+function PhotoEditor(): JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const [image, setImage] = useState<HTMLImageElement>();
@@ -37,18 +37,16 @@ const PhotoEditor = (): JSX.Element => {
 
   const handleImageUpload = useCallback(
     (imageParams: ImageParams): void => {
-      const { image } = imageParams;
-
       renderImage(imageParams);
-      setImage(image);
+      setImage(imageParams.image);
     },
     [renderImage]
   );
 
   return (
-    <div className="photo-editor">
+    <div className='photo-editor'>
       <h1>Photo Editor</h1>
-      <div className="photo-editor__transfer-buttons">
+      <div className='photo-editor__transfer-buttons'>
         <UploadImageButtons onImageUpload={handleImageUpload} />
         <ExportButton
           canvasRef={canvasRef}
@@ -68,6 +66,6 @@ const PhotoEditor = (): JSX.Element => {
       />
     </div>
   );
-};
+}
 
 export default PhotoEditor;

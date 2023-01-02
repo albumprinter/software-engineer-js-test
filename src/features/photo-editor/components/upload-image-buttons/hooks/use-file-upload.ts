@@ -1,11 +1,11 @@
-import { useCallback } from "react";
+import { useCallback } from 'react';
 
 import {
   ALLOWED_IMAGE_MIME_TYPES,
   JSON_MIME_TYPE,
   PIXELS_PER_INCH,
-} from "../../../constants";
-import { ImageParams, UploadedImageDescription } from "../../../types";
+} from '../../../constants';
+import { ImageParams, UploadedImageDescription } from '../../../types';
 
 type OnImageUpload = (params: ImageParams) => void;
 type HandleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -53,8 +53,8 @@ export const useFileUpload = (onImageUpload: OnImageUpload): HandleFileUpload =>
       if (isJsonType) {
         // Read the JSON file with image description
         reader.readAsText(file);
-        reader.onload = (event: ProgressEvent<FileReader>) => {
-          const { target } = event;
+        reader.onload = (e: ProgressEvent<FileReader>) => {
+          const { target } = e;
 
           if (!target?.result) return;
 
@@ -77,7 +77,12 @@ export const useFileUpload = (onImageUpload: OnImageUpload): HandleFileUpload =>
           image.src = src;
           image.onload = () => {
             // When an image is loaded invokes the function for rendering
-            onImageUpload({ image, xImageAxis, yImageAxis, isExported: true });
+            onImageUpload({
+              image,
+              xImageAxis,
+              yImageAxis,
+              isExported: true,
+            });
           };
         };
       }

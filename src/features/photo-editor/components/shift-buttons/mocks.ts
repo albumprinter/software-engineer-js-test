@@ -1,10 +1,10 @@
-import { ShiftButtonsProps } from "./types";
+import { ShiftButtonsProps } from './types';
 
 export const mockShiftButtonsProps: ShiftButtonsProps = {
   image: new Image(),
   setImageCoordinates: jest.fn(),
   canvasRef: {
-    current: document.createElement("canvas"),
+    current: document.createElement('canvas'),
   },
   imageSize: {
     imageWidth: 1440,

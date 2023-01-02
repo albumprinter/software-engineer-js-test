@@ -1,16 +1,16 @@
-import { renderHook, act } from "@testing-library/react-hooks";
-import "jest-canvas-mock";
-import { useFileUpload } from "./use-file-upload";
+import { renderHook, act } from '@testing-library/react-hooks';
+import 'jest-canvas-mock';
+import { useFileUpload } from './use-file-upload';
 import {
   PIXELS_PER_INCH,
   IMAGE_JPEG_MIME_TYPE,
   JSON_MIME_TYPE,
-} from "../../../constants";
+} from '../../../constants';
 
 const mockOnImageUpload = jest.fn();
 
 const mockImage = {
-  src: "",
+  src: '',
   onload: jest.fn(),
 };
 
@@ -18,16 +18,16 @@ const mockFileReader = {
   readAsDataURL: jest.fn(),
   readAsText: jest.fn(),
   onload: jest.fn(),
-  result: "result",
+  result: 'result',
 };
 
-describe("useShiftHandlers", () => {
+describe('useShiftHandlers', () => {
   beforeEach(() => {
     jest
-      .spyOn(global, "Image")
+      .spyOn(global, 'Image')
       .mockReturnValue(mockImage as unknown as HTMLImageElement);
     jest
-      .spyOn(global, "FileReader")
+      .spyOn(global, 'FileReader')
       .mockReturnValue(mockFileReader as unknown as FileReader);
   });
 
@@ -35,15 +35,15 @@ describe("useShiftHandlers", () => {
     jest.restoreAllMocks();
   });
 
-  it("should return file upload handler", () => {
+  it('should return file upload handler', () => {
     const {
       result: { current },
     } = renderHook(() => useFileUpload(mockOnImageUpload));
 
-    expect(typeof current).toBe("function");
+    expect(typeof current).toBe('function');
   });
 
-  it("should handle image file uploading", () => {
+  it('should handle image file uploading', () => {
     const mockImageFile = {
       type: IMAGE_JPEG_MIME_TYPE,
     };
@@ -73,13 +73,13 @@ describe("useShiftHandlers", () => {
     });
   });
 
-  it("should handle JSON file uploading", () => {
+  it('should handle JSON file uploading', () => {
     const mockJSONFile = {
       type: JSON_MIME_TYPE,
     };
 
     const mockPhotoDescription = {
-      src: "src",
+      src: 'src',
       x: 0,
       y: 0,
     };

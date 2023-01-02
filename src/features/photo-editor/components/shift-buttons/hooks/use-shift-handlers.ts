@@ -1,7 +1,7 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo } from 'react';
 
-import { SHIFT_STEP } from "../../../constants";
-import { ShiftButtonsProps } from "../types";
+import { SHIFT_STEP } from '../../../constants';
+import { ShiftButtonsProps } from '../types';
 
 type ShiftHandlers = {
   handleMoveLeft: () => void;
@@ -29,7 +29,7 @@ export const useShiftHandlers = ({
   initialCoordinates,
 }: ShiftButtonsProps): ShiftHandlers => {
   const canvas = canvasRef?.current;
-  const ctx = canvas?.getContext("2d");
+  const ctx = canvas?.getContext('2d');
 
   const { xImageAxis, yImageAxis } = imageCoordinates;
   const { imageWidth, imageHeight } = imageSize;

@@ -1,4 +1,4 @@
-import { Coordinates, ImageSize } from "../../types";
+import { Coordinates, ImageSize } from '../../types';
 
 export type ShiftButtonsProps = {
   initialCoordinates: React.MutableRefObject<Coordinates>;
