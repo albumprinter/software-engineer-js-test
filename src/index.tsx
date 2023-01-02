@@ -1,4 +1,6 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import PhotoEditor from './features/photo-editor';
 
-render(<PhotoEditor />, document.body);
+const root = createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(<PhotoEditor />);
