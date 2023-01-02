@@ -13,8 +13,6 @@ type UploadImageProps = {
 function UploadImageButtons({ onImageUpload }: UploadImageProps): JSX.Element {
   const handleFileUpload = useFileUpload(onImageUpload);
 
-  // TODO: Fix styles
-
   return (
     <>
       <label htmlFor='fileSelector'>
