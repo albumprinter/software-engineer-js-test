@@ -1,5 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { PhotoEditor } from './components/photo-editor';
 
-render(<PhotoEditor />, document.body);
+const container = document.getElementById('app');
+const root = createRoot(container!);
+root.render(<PhotoEditor />);
